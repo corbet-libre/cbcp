@@ -2,10 +2,10 @@
 
 **BCP 47 locale-ID casting and vendor code mapping, identical in every language.**
 
-[![crates.io](https://img.shields.io/crates/v/cbcp.svg)](https://crates.io/crates/cbcp) [![npm](https://img.shields.io/npm/v/@corbet-foss/cbcp.svg)](https://www.npmjs.com/package/@corbet-foss/cbcp) [![PyPI](https://img.shields.io/pypi/v/cbcp.svg)](https://pypi.org/project/cbcp/) [![JSR](https://jsr.io/badges/@corbet-foss/cbcp)](https://jsr.io/@corbet-foss/cbcp)
+[![crates.io](https://img.shields.io/crates/v/cbcp.svg)](https://crates.io/crates/cbcp) [![npm](https://img.shields.io/npm/v/@corbet-labs/cbcp.svg)](https://www.npmjs.com/package/@corbet-labs/cbcp) [![PyPI](https://img.shields.io/pypi/v/cbcp.svg)](https://pypi.org/project/cbcp/) [![JSR](https://jsr.io/badges/@corbet-labs/cbcp)](https://jsr.io/@corbet-labs/cbcp)
 
 ```js
-import { normalizeLocaleId, toBcp47, deeplTarget } from '@corbet-foss/cbcp';
+import { normalizeLocaleId, toBcp47, deeplTarget } from '@corbet-labs/cbcp';
 
 normalizeLocaleId(' DE_Ch '); // 'de-ch' — storage and wire form
 toBcp47('de-ch');             // 'de-CH' — display form
@@ -54,16 +54,18 @@ documentation; a vendor change is a new `cbcp` minor version.
 | Environment | Command |
 |---|---|
 | Rust / Cargo | `cargo add cbcp` |
-| Node.js / npm | `npm install @corbet-foss/cbcp` |
-| Deno | `deno add jsr:@corbet-foss/cbcp` |
+| Node.js / npm | `npm install @corbet-labs/cbcp` |
+| Deno | `deno add jsr:@corbet-labs/cbcp` |
 | Python / pip | `python -m pip install cbcp` |
 
-See [installation](docs/installation.md) for details and [releasing](docs/releasing.md)
-for the vector-first release process.
+See [installation](https://github.com/corbet-foss/cbcp/blob/main/docs/installation.md) for details and
+[releasing](https://github.com/corbet-foss/cbcp/blob/main/docs/releasing.md) for the vector-first release process.
 
 ## License
 
 Copyright 2026 Julian Y. Richard Corbet. Licensed under
-[LGPL-3.0-only WITH LGPL-3.0-linking-exception](<LICENSES/LGPL-3.0-only WITH LGPL-3.0-linking-exception.txt>).
-See [LICENSE.md](LICENSE.md).
+[LGPL-3.0-only](https://github.com/corbet-foss/cbcp/blob/main/LICENSES/LGPL-3.0-only.txt)
+[WITH LGPL-3.0-linking-exception](https://github.com/corbet-foss/cbcp/blob/main/LICENSES/LGPL-3.0-linking-exception.txt),
+with the incorporated [GPL version 3](https://github.com/corbet-foss/cbcp/blob/main/LICENSES/GPL-3.0-only.txt).
+See the [licensing notes](https://github.com/corbet-foss/cbcp/blob/main/LICENSE.md).
 Contributions are subject to the [Contributor License Agreement](CLA.md).
