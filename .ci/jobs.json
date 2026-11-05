@@ -1,22 +1,46 @@
 {
   "schema": 1,
   "generator": "ccid render v1",
-  "tool_revision": "78a4e05b4e1cb25aaeba3966951564d74277bcbd",
-  "manifest_sha256": "681200f510760e26c3be1959efb5b739506440485d419866de58f2ae82e0ff71",
+  "tool_revision": "bd9aff07073185fb0a3503bab331aedefb6d8fd2",
+  "manifest_sha256": "d0499693b5c9e0bd512d14e951d55a1f2025cecfdbce534bb736a5880fd5325a",
   "jobs": {
     "verify": {
       "job": "verify",
-      "scheduler": "crow",
+      "scheduler": "forgejo",
       "checks": [
         "verify",
         "published-npm",
         "published-jsr",
         "published-python"
       ],
-      "workflow": "repository-jobs",
+      "workflow": "ci",
       "command": [
         "bash",
         ".ci/run-cached.sh"
+      ],
+      "runs_on": "heavy",
+      "events": [
+        "push",
+        "manual"
+      ]
+    },
+    "verify-pr": {
+      "job": "verify-pr",
+      "scheduler": "forgejo",
+      "checks": [
+        "verify",
+        "published-npm",
+        "published-jsr",
+        "published-python"
+      ],
+      "workflow": "pr",
+      "command": [
+        "bash",
+        ".ci/run-cached.sh"
+      ],
+      "runs_on": "light",
+      "events": [
+        "pull_request"
       ]
     }
   }
